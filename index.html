@@ -1,82 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio</title>
 
-<!--========================== Swipper CSS =========================-->
+    <!--========================== Swipper CSS =========================-->
 
-<!--========================== Main stylesheet =========================-->
-<link rel="stylesheet" href="assets/css/style.css">
+    <!--========================== Main stylesheet =========================-->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-<!--========================== Remixicon =========================-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <!--========================== Remixicon =========================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
 
-<!--========================== ScrollReveal JS =========================-->
+    <!--========================== ScrollReveal JS =========================-->
 </head>
+
 <body>
 
-<!--========================== Customized cursor =========================-->
+    <!--========================== Customized cursor =========================-->
 
-<!--========================== To top button with scroll indicator bar =========================-->
+    <!--========================== To top button with scroll indicator bar =========================-->
 
-<!--========================== Header =========================-->
-<header class="yago-header">
-    <div class="yago-container">
-        <div class="inner">
-           <div class="yago-logo">
-            <a href="#"><span>yago.dev</span></a>
-           </div> 
-           <div class="header-btns">
-            <div class="yago-main-btn border-btn lets-talk-btn">
-                <a href="#contato">Fale comigo</a>
+    <!--========================== Header =========================-->
+    <header class="yago-header">
+        <div class="yago-container">
+            <div class="inner">
+                <div class="yago-logo">
+                    <a href="#"><span>yago.dev</span></a>
+                </div>
+                <div class="header-btns">
+                    <div class="yago-main-btn border-btn lets-talk-btn">
+                        <a href="#contato">Fale comigo</a>
+                    </div>
+                    <a href="#" class="lets-talk-icon"><i class="ri-chat-1-fill"></i></a>
+                    <div class="theme-btn">
+                        <i class="ri-sun-fill sun-icon"></i>
+                        <i class="ri-moon-fill moon-icon"></i>
+                    </div>
+                </div>
             </div>
-            <a href="#" class="lets-talk-icon"><i class="ri-chat-1-fill"></i></a>
-            <div class="theme-btn">
-                <i class="ri-sun-fill sun-icon"></i>
-                <i class="ri-moon-fill moon-icon"></i>
+        </div>
+    </header>
+
+    <!--========================== Bottom Navigation menu =========================-->
+    <div class="bottom-nav-container">
+        <div class="bottom-nav">
+            <div class="bottom-nav-inner">
+                <i class="ri-arrow-left-down-line menu-hide-btn"></i>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#home" class="current"><i
+                                class="ri-home-4-line"></i><span>Home</span></a></li>
+                    <li class="menu-item"><a href="#about"><i class="ri-user-line"></i></i><span>Sobre</span></a></li>
+                    <li class="menu-item"><a href="#resume"><i class="ri-user-3-line"></i></i><span>Resumo</span></a>
+                    </li>
+                    <li class="menu-item"><a href="#services"><i
+                                class="ri-service-line"></i></i></i><span>Serviços</span></a></li>
+                    <li class="menu-item"><a href="#portfolio"><i
+                                class="ri-briefcase-line"></i></i></i><span>Portifolio</span></a></li>
+                    <li class="menu-item"><a href="#contato"><i
+                                class="ri-chat-1-line"></i></i></i><span>Contato</span></a></li>
+                </ul>
             </div>
-           </div>
+        </div>
+        <div class="menu-show-btn">
+            <div class="bar-01"></div>
+            <div class="bar-02"></div>
         </div>
     </div>
-</header>
 
-<!--========================== Bottom Navigation menu =========================-->
-<div class="bottom-nav-container">
-    <div class="bottom-nav">
-        <div class="bottom-nav-inner">
-            <i class="ri-arrow-left-down-line menu-hide-btn"></i>
-            <ul class="menu">
-                <li class="menu-item"><a href="#home" class="current"><i class="ri-home-4-line"></i><span>Home</span></a></li>
-                <li class="menu-item"><a href="#about"><i class="ri-user-line"></i></i><span>Sobre</span></a></li>
-                <li class="menu-item"><a href="#resume"><i class="ri-user-3-line"></i></i><span>Resumo</span></a></li>
-                <li class="menu-item"><a href="#services"><i class="ri-service-line"></i></i></i><span>Serviços</span></a></li>
-                <li class="menu-item"><a href="#portfolio"><i class="ri-briefcase-line"></i></i></i><span>Portifolio</span></a></li>
-                <li class="menu-item"><a href="#contato"><i class="ri-chat-1-line"></i></i></i><span>Contato</span></a></li>
-            </ul>
+    <!--========================== Home =========================-->
+    <section class="yago-section nav-menu-section" id="home">
+        <div class="yago-container home-container">
+            <div class="yago-wrapper">
+                <div class="home-social">
+                    <span>Me siga</span>
+                    <div class="social-line"></div>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+                        <li><a href="#"><i class="ri-github-fill"></i></a></li>
+                        <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+                    </ul>
+                </div>
+                <div class="avatar-container">
+                    <div class="yago-main-btn fill-btn hire-btn-01">
+                        <a href="#">Me contrate <i class="ri-user-follow-line"></i></a>
+                    </div>
+                    <div class="avatar-img">
+                        <img src="assets/images/avatar4.png" alt="">
+                    </div>
+                    <div class="avatar-info">
+                        <div class="text-content">
+                            <h4 class="hello-text">Olá, me chamo</h4>
+                            <h1 class="my-name">Yago Walter</h1>
+                            <p class="what-i-do">Web Designer & Developer</p>
+                        </div>
+                        <div class="yago-main-btn fill-btn hire-btn-02">
+                            <a href="#">Me contrate <i class="ri-user-follow-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#about" class="home-scroll-btn">
+                    <i class="ri-mouse-line mouse-icon"></i>
+                    <div>Scroll Down</div>
+                    <i class="ri-arrow-down-s-line arrow-icon"></i>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="menu-show-btn">
-        <div class="bar-01"></div>
-        <div class="bar-02"></div>
-    </div>
-</div>
+    </section>
 
-<!--========================== Home =========================-->
+    <!--========================== Sobre mim =========================-->
 
-<!--========================== Sobre mim =========================-->
+    <!--========================== My resume  =========================-->
 
-<!--========================== My resume  =========================-->
+    <!--========================== Services =========================-->
 
-<!--========================== Services =========================-->
+    <!--========================== Portifolio =========================-->
 
-<!--========================== Portifolio =========================-->
+    <!--========================== Contato =========================-->
 
-<!--========================== Contato =========================-->
+    <!--========================== Footer =========================-->
 
-<!--========================== Footer =========================-->
 
-    
 </body>
+
 </html>
