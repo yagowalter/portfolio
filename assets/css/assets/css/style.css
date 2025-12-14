@@ -1,0 +1,623 @@
+/* ===========================================================
+    Google Fonts
+=========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* ===========================================================
+    CSS Variables
+=========================================================== */
+
+:root {
+
+    --hue: 217;
+    --sat: 85%;
+    --light: 74%;
+
+    --primary-color: hsl(var(--hue), var(--sat), var(--light));
+    /*cor primária*/
+    --white-color: hsl(var(--hue) 45% 98%);
+    /*claro*/
+    --dark-color: hsl(var(--hue) 26% 12%);
+    /*escuro*/
+
+    /* ===========================================================
+    Alterations for Dark Mode
+=========================================================== */
+
+    --color-01: hsl(var(--hue), var(--sat), var(--light));
+    /* Primary para dark */
+    --color-02: hsl(var(--hue) 45% 98%);
+    /* Claro para escuro */
+    --color-03: hsl(var(--hue) 26% 12%);
+    /* Escuro para claro */
+    --color-04: hsl(var(--hue) 0% 62%);
+    /* cinza claro para cinza escuro */
+    --color-05: hsl(var(--hue) 26% 12%);
+    /* escuro para primário */
+
+    --body-color: hsl(250 26% 12%);
+    /*escuro para claro*/
+    --hover-color: hsl(var(--hue) var(--sat) calc(var(--light) - 7%));
+
+    /* ==========================================================
+        Background colors
+    =========================================================== */
+
+    --bottom-nav-bg: hsl(var(--hue) 32% 25% / .65);
+    --card-bg: linear-gradient(120deg, hsl(var(--hue) 54% 74% / .15), hsl(var(--hue) 54% 74% / .05));
+    --modal-backdrop-bg: hsl(var(--hue) 54% 74% / .1);
+    --footer-bg: linear-gradient(360deg, hsl(var(--hue) 54% 74% / .15), hsl(var(--hue) 54% 74% / .1));
+    ;
+
+    --scrollbar-color: hsl(var(--hue) 25% 20%);
+    --scrollbar-thumb: hsl(var(--hue), var(--sat), var(--light));
+    --scrollbar-thumb-hover: sl(var(--hue) var(--sat) calc(var(--light) - 7%));
+
+    /* ==========================================================
+        Fonte e tipografia
+    =========================================================== */
+
+    --body-font-family: "Inter", sans-serif;
+
+
+    /*    ==========================================================
+        Tamanho da fonte
+    =========================================================== */
+
+    --h1-font-size: 2.85rem;
+    --h2-font-size: 2.25rem;
+    --h3-font-size: 1.97rem;
+    --h4-font-size: 1.43rem;
+    --h5-font-size: 1.13rem;
+
+    --xlarge-font-size: 1.48rem;
+    --large-font-size: 1.23rem;
+    --medium-font-size: 1.18rem;
+    --base-font-size: 1.1rem;
+    --small-font-size: 1.07rem;
+    --tiny-font-size: .98rem;
+
+    /*    ==========================================================
+        Font weights
+    =========================================================== */
+
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*    ==========================================================
+        Layering order(z-index)
+    =========================================================== */
+    --z-minus: -1;
+    --z-base: 0;
+    --z-low: 1;
+    --z-high: 10;
+    --z-content: 100;
+    --z-tooltip: 1000;
+    --z-fixed: 1100;
+    --z-overlay: 1110;
+    --z-modal: 1990;
+    --z-max: 9999;
+}
+
+/*    ========================================================= Tema claro ===================================================== */
+
+/* ==========================================================
+        Resetar  
+    =========================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font-family);
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: var(--color-04);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ==========================================================
+    Estilos base
+========================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--color-04);
+    background: var(--body-color);
+    transition: .3s;
+}
+
+/* ==========================================================
+    Estilos reutilizados
+========================================================== */
+.yago-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.yago-container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.yago-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================
+    Components
+========================================================== */
+
+/* ================ Page Scroll bar ================ */
+
+/* ================ Cursor customizado ================ */
+
+/* ================ Botão de voltar ao topo ================ */
+
+/* ================ Botões ================ */
+.yago-main-btn {
+    width: fit-content;
+    padding: 14px 30px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.yago-main-btn:hover {
+    color: var(--white-color);
+    background: var(--hover-color);
+    border: 2px solid var(--hover-color);
+}
+
+.yago-main-btn a {
+    color: var(--color-01);
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    transition: .3s;
+}
+
+.yago-main-btn:hover a {
+    color: var(--white-color);
+}
+
+.border-btn {
+    border: 2px solid var(--color-01);
+}
+
+.fill-btn {
+    background: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.fill-btn a{
+    color: var(--dark-color);
+}
+
+/* ===================================================
+    Header
+=================================================== */
+.yago-header {
+    z-index: var(--z-fixed);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px 0;
+    transition: .3s ease;
+}
+
+.yago-header .inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.yago-logo a {
+    color: var(--color-01);
+    font-size: 2.6rem;
+    font-weight: var(--font-semi-bold);
+    letter-spacing: -3px;
+    transition: .3s;
+
+}
+
+.yago-logo a:hover {
+    color: var(--hover-color);
+}
+
+.header-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.lets-talk-icon {
+    color: var(--color-01);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: .3s;
+    display: none;
+}
+
+.lets-talk-icon:hover {
+    color: var(--hover-color);
+}
+
+/* ================ Botões para tema claro/escuro ======= */
+.theme-btn {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 27px;
+    cursor: pointer;
+}
+
+.theme-btn i {
+    position: absolute;
+    color: var(--color-01);
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.theme-btn i:hover {
+    color: var(--hover-color);
+    transform: rotate(-15deg);
+}
+
+.theme-btn .moon-icon {
+    display: none;
+}
+
+/* ===================================================
+    Bottom navigation
+=================================================== */
+.bottom-nav-container {
+    position: relative;
+}
+
+.bottom-nav {
+    z-index: var(--z-fixed);
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+}
+
+.bottom-nav-inner {
+    position: relative;
+}
+
+.bottom-nav .menu {
+    background: var(--bottom-nav-bg);
+    backdrop-filter: blur(10px);
+    padding: 16px 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+    border-bottom: 1px solid hsl(var(--hue) 45% 98% /.1);
+    border-left: 1px solid hsl(var(--hue) 45% 98% /.1);
+    border-radius: 50px;
+    /* display: none; */
+}
+
+.bottom-nav .menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bottom-nav .menu li a i {
+    color: var(--color-02);
+    font-size: 1.4rem;
+    padding: 10px;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.bottom-nav .menu li a i:hover {
+    color: var(--white-color);
+    background: var(--hover-color);
+}
+
+.bottom-nav .menu .current i {
+    color: var(--dark-color);
+    background: var(--primary-color);
+}
+
+.bottom-nav .menu li a span {
+    z-index: var(--z-tooltip);
+    position: absolute;
+    color: var(--dark-color);
+    background: var(--primary-color);
+    font-size: var(--tiny-font-size);
+    font-weight: var(--font-medium);
+    padding: 3px 10px;
+    transform: translateY(-53px);
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.bottom-nav .menu li a:hover span {
+    opacity: 1;
+}
+
+.bottom-nav .menu li a span::before {
+    content: "";
+    z-index: var(--z-minus);
+    position: absolute;
+    background: var(--primary-color);
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    bottom: -8px;
+    transform: rotate(45deg) translateX(-50%);
+}
+
+.bottom-nav .menu-hide-btn {
+    z-index: var(--z-fixed);
+    position: absolute;
+    top: -5px;
+    right: 0;
+    color: var(--dark-color);
+    font-size: 1.52rem;
+    background: var(--primary-color);
+    padding: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.bottom-nav .menu-hide-btn:hover {
+    color: var(--white-color);
+    background: var(--hover-color);
+}
+
+.menu-show-btn {
+    z-index: var(--z-fixed);
+    position: fixed;
+    background: var(--bottom-nav-bg);
+    backdrop-filter: blur(10px);
+    width: 85px;
+    height: 50px;
+    border-bottom: 1px solid hsl(var(--hue) 45% 98% /.1);
+    border-left: 1px solid hsl(var(--hue) 45% 98% /.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    translate: -50% 0;
+    left: 50%;
+    /* bottom: 50px; */
+    bottom: -75px;
+    opacity: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    animation: wiggle 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes wiggle {
+
+    0%,
+    5% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        transform: rotateZ(6deg);
+    }
+
+    40%,
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
+.menu-show-btn .bar-01,
+.menu-show-btn .bar-02 {
+    background: var(--primary-color);
+    width: 40px;
+    height: 4px;
+    transition: .15s;
+}
+
+.menu-show-btn:hover .bar-01,
+.menu-show-btn:hover .bar-02 {
+    background: var(--hover-color);
+}
+
+/* ===================================================
+    Home
+=================================================== */
+.home-container {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+}
+
+.home-container .yago-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.avatar-img {
+    position: relative;
+    width: 425px;
+    height: 425px;
+}
+
+.avatar-img img {
+    position: absolute;
+    width: 100%;
+}
+
+.home-social {
+    position: absolute;
+    left: 0;
+}
+
+.home-social span{
+    position: absolute;
+    left: 10px;
+    color: var(--color-01);
+    font-size: var(--tiny-font-size);
+    white-space: nowrap;
+    transform: rotateZ(-90deg);
+    transform-origin: left;
+}
+
+.home-social .social-line{
+    background: var(--color-01);
+    width: 1px;
+    height: 100px;
+    margin: 37px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.home-social .social-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.home-social .social-icons li a{
+    color: var(--color-01);
+    font-size: var(--xlarge-font-size);
+    transition: .3s;
+}
+
+.home-social .social-icons li a:hover{
+    color: var(--hover-color);
+}
+
+.avatar-container .hire-btn-01{
+    display: none;
+}
+
+.avatar-info {
+    position: relative;
+}
+
+.avatar-info .text-content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.avatar-info .hello-text{
+    font-size: var(--base-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.avatar-info .my-name{
+    color: 0var(--color-02);
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+}
+
+.avatar-info .what-i-do{
+    font-size: var(--base-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 35px;
+}
+
+.home-scroll-btn{
+    position: absolute;
+    right: -5px;
+    color: var(--color-01);
+    display: grid;
+    justify-items: center;
+    row-gap: 3px;
+    animation: up-down 1.5s linear infinite;
+    animation-delay: 1.85s;
+}
+
+@keyframes up-down {
+    0%{
+        transform: translateY(8px);
+    }
+    50%{
+        transform: translateY(-8px);
+    }100%{
+        transform: translateY(8px);
+    }
+}
+
+.home-scroll-btn:hover{
+    color: var(--hover-color);
+}
+
+.home-scroll-btn div{
+    font-size: var(--tiny-font-size);
+    font-weight: var(--font-regular);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    white-space: nowrap;
+    transform: rotate(180deg);
+    margin-top: 7px;
+}
+
+.home-scroll-btn i{
+    font-size: 21;
+}
+
+
+
+/* ===================================================
+    Sobre mim
+=================================================== */
+
+/* ===================================================
+    My resume
+=================================================== */
