@@ -154,12 +154,44 @@ body {
     margin-right: auto;
 }
 
-
+.yago-sub-container{
+    padding-top: 7em;
+    padding-bottom: 5em;
+}
 
 .yago-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
+    
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 95px;
+}
+
+.section-title h3{
+    color: var(--color-01);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: 10px;
+}
+
+.section-title p{
+    color: var(--color-04);
+    font-size: var(--base-font-size);
+    font-weight: var(--font-regular);
+}
+
+.section-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 75px;
 }
 
 /* ==========================================================
@@ -617,7 +649,34 @@ body {
 /* ===================================================
     Sobre mim
 =================================================== */
+.about-img{
+    position: relative;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.about-img img{
+    width: 100%;
+    border-radius: 15px;
+}
 
 /* ===================================================
     My resume
 =================================================== */
+
+/* ===================================================
+    Serviços
+=================================================== */
+
+/* ===================================================
+    Portfólio   
+=================================================== */
+
+
+/* ===================================================
+    Contato
+=================================================== */
+
