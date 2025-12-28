@@ -154,7 +154,7 @@ body {
     margin-right: auto;
 }
 
-.yago-sub-container{
+.yago-sub-container {
     padding-top: 7em;
     padding-bottom: 5em;
 }
@@ -163,7 +163,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    
+
 }
 
 .section-title {
@@ -174,20 +174,20 @@ body {
     margin-bottom: 95px;
 }
 
-.section-title h3{
+.section-title h3 {
     color: var(--color-01);
     font-size: var(--h3-font-size);
     font-weight: var(--font-bold);
     margin-bottom: 10px;
 }
 
-.section-title p{
+.section-title p {
     color: var(--color-04);
     font-size: var(--base-font-size);
     font-weight: var(--font-regular);
 }
 
-.section-content{
+.section-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,10 +199,6 @@ body {
 ========================================================== */
 
 /* ================ Page Scroll bar ================ */
-
-/* ================ Cursor customizado ================ */
-
-/* ================ Botão de voltar ao topo ================ */
 
 /* ================ Botões ================ */
 .yago-main-btn {
@@ -239,7 +235,7 @@ body {
     border: 2px solid var(--primary-color);
 }
 
-.fill-btn a{
+.fill-btn a {
     color: var(--dark-color);
 }
 
@@ -538,7 +534,7 @@ body {
     left: 0;
 }
 
-.home-social span{
+.home-social span {
     position: absolute;
     left: 10px;
     color: var(--color-01);
@@ -548,7 +544,7 @@ body {
     transform-origin: left;
 }
 
-.home-social .social-line{
+.home-social .social-line {
     background: var(--color-01);
     width: 1px;
     height: 100px;
@@ -557,23 +553,23 @@ body {
     margin-left: 10px;
 }
 
-.home-social .social-icons{
+.home-social .social-icons {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.home-social .social-icons li a{
+.home-social .social-icons li a {
     color: var(--color-01);
     font-size: var(--xlarge-font-size);
     transition: .3s;
 }
 
-.home-social .social-icons li a:hover{
+.home-social .social-icons li a:hover {
     color: var(--hover-color);
 }
 
-.avatar-container .hire-btn-01{
+.avatar-container .hire-btn-01 {
     display: none;
 }
 
@@ -581,30 +577,30 @@ body {
     position: relative;
 }
 
-.avatar-info .text-content{
+.avatar-info .text-content {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
 }
 
-.avatar-info .hello-text{
+.avatar-info .hello-text {
     font-size: var(--base-font-size);
     font-weight: var(--font-semi-bold);
 }
 
-.avatar-info .my-name{
+.avatar-info .my-name {
     color: 0var(--color-02);
     font-size: var(--h1-font-size);
     font-weight: var(--font-bold);
 }
 
-.avatar-info .what-i-do{
+.avatar-info .what-i-do {
     font-size: var(--base-font-size);
     font-weight: var(--font-semi-bold);
     margin-bottom: 35px;
 }
 
-.home-scroll-btn{
+.home-scroll-btn {
     position: absolute;
     right: -5px;
     color: var(--color-01);
@@ -616,21 +612,24 @@ body {
 }
 
 @keyframes up-down {
-    0%{
+    0% {
         transform: translateY(8px);
     }
-    50%{
+
+    50% {
         transform: translateY(-8px);
-    }100%{
+    }
+
+    100% {
         transform: translateY(8px);
     }
 }
 
-.home-scroll-btn:hover{
+.home-scroll-btn:hover {
     color: var(--hover-color);
 }
 
-.home-scroll-btn div{
+.home-scroll-btn div {
     font-size: var(--tiny-font-size);
     font-weight: var(--font-regular);
     writing-mode: vertical-rl;
@@ -640,7 +639,7 @@ body {
     margin-top: 7px;
 }
 
-.home-scroll-btn i{
+.home-scroll-btn i {
     font-size: 21;
 }
 
@@ -649,7 +648,7 @@ body {
 /* ===================================================
     Sobre mim
 =================================================== */
-.about-img{
+.about-img {
     position: relative;
     width: 35%;
     display: flex;
@@ -658,10 +657,221 @@ body {
     pointer-events: none;
 }
 
-.about-img img{
+.about-img img {
     width: 100%;
     border-radius: 15px;
+    transition: transform 1s cubic-bezier(.2, .8, .2, 1), filter 1s cubic-bezier(.2, .8, .2, 1), opacity 1s cubic-bezier(.2, .8, .2, 1);
 }
+
+.about-details {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-info .iam {
+    color: var(--color-02);
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 30px;
+}
+
+.about-info .about-description {
+    font-size: var(--base-font-size);
+    font-weight: var(--font-regular);
+    line-height: 25px;
+}
+
+.about-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 25px;
+}
+
+/* ===================== Certificados (cards) ===================== */
+.cert-section {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    padding: 18px 20px 6px 20px;
+    border-radius: 12px;
+    margin-top: 32px;
+}
+
+.cert-header .cert-section-title {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: var(--font-bold);
+    margin: 0 0 4px 0;
+}
+
+.cert-section-sub {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: .98rem;
+    margin: 0 0 12px 0;
+}
+
+.cert-list {
+    margin-top: 15px;
+    padding: 10px 10px 45px 10px;
+    /* space for pagination */
+    overflow: hidden;
+}
+
+.cert-list .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+
+.cert-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(2, 6, 23, 0.02));
+    padding: 24px 20px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 200px;
+    gap: 15px;
+
+    transition:
+        transform .45s cubic-bezier(.22, 1, .36, 1),
+        box-shadow .45s ease,
+        background .45s ease;
+
+    overflow: visible;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    position: relative;
+    will-change: transform, box-shadow;
+}
+
+/* Swiper Pagination styling */
+.cert-list .swiper-pagination-bullet {
+    background: var(--color-01);
+    opacity: 0.3;
+}
+
+.cert-list .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--primary-color);
+}
+
+.cert-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 26px rgba(2, 6, 23, 0.16);
+}
+
+.cert-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 4px;
+    padding-right: 0;
+}
+
+/* ensure content stretches so link stays at bottom */
+.cert-link {
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.cert-name {
+    color: var(--primary-color);
+    font-size: 1.08rem;
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 6px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.cert-name.small {
+    font-size: .92rem !important;
+    line-height: 1.1rem;
+}
+
+.cert-company {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: .95rem;
+    margin-bottom: 6px;
+    overflow-wrap: anywhere;
+}
+
+.cert-meta {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: .80rem;
+}
+
+.cert-link {
+    display: inline-block;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: .86rem;
+    text-decoration: underline;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity .45s cubic-bezier(.2, .8, .2, 1), transform .45s cubic-bezier(.2, .8, .2, 1);
+    margin-top: 8px;
+}
+
+.cert-card:hover .cert-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hide link if course is in progress */
+.cert-card:has(.cert-badge.andamento) .cert-link {
+    display: none !important;
+}
+
+.cert-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    min-width: 86px;
+    border-radius: 18px;
+    font-weight: var(--font-medium);
+    font-size: .86rem;
+    text-transform: none;
+    box-shadow: 0 6px 16px rgba(2, 6, 23, 0.12);
+    /* Remove absolute positioning to prevent overlap */
+    align-self: flex-start;
+    margin-bottom: 5px;
+}
+
+.cert-badge.concluido {
+    background: #059669;
+    /* vivid green */
+    color: #ffffff;
+    border: 1px solid rgba(5, 150, 105, 0.16);
+}
+
+.cert-badge.andamento {
+    background: #2563eb;
+    /* cooler blue */
+    color: #ffffff;
+    border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+/* reduce illustration prominence when certs are in view */
+body.certs-dimmed .about-img {
+    opacity: 0.68;
+    /* subtle dim */
+    transition: opacity 1s cubic-bezier(.2, .8, .2, 1);
+}
+
+body.certs-dimmed .about-img img {
+    transform: scale(0.985);
+    filter: grayscale(18%) brightness(0.93);
+    opacity: 0.95;
+}
+
+/* make sure old pro-card styles don't interfere */
+.pro-list {
+    display: none;
+}
+
+
 
 /* ===================================================
     My resume
@@ -679,4 +889,3 @@ body {
 /* ===================================================
     Contato
 =================================================== */
-
